@@ -1,0 +1,27 @@
+{%extends 'base.html'%}
+{%block body_block%}
+
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <table class="table">
+        <tr>
+          <td>User Name</td>
+          <td>Address</td>
+          <td>Email</td>
+          <td>Phone</td>
+        </tr>
+        {%for user in users%}
+        <tr>
+          <td>{{user.user_name}}</td>
+          <td>{{user.address}}</td>
+          <td>{{user.email}}</td>
+          <td>{{user.phone}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+    </div>
+    <div class="col-4"></div>
+  </div>
+
+{%endblock%}

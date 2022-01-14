@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block body_block%}
+
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <table class="table">
+        <tr>
+          <td>Device Name</td>
+          <td>IMEI</td>
+          <td>Primary Sim</td>
+          <td>Secondary Sim</td>
+          <td>Firmware Option</td>
+        </tr>
+        {%for device in products%}
+        <tr>
+          <td>{{device.device_name}}</td>
+          <td>{{device.device_imei}}</td>
+          <td>{{device.primary_sim}}</td>
+          <td>{{device.secondary_sim}}</td>
+          <td>{{device.firmware_option}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+    </div>
+    <div class="col-4"></div>
+  </div>
+
+{%endblock%}

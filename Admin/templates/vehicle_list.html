@@ -1,0 +1,25 @@
+{%extends 'base.html'%}
+{%block body_block%}
+
+  <div class="row">
+    <div class="col-4"></div>
+    <div class="col-4">
+      <table class="table">
+        <tr>
+          <td>Vehicle Name</td>
+          <td>Brand</td>
+          <td>Model</td>
+        </tr>
+        {%for vehicle in vehicles%}
+        <tr>
+          <td>{{vehicle.vehicle_name}}</td>
+          <td>{{vehicle.brand}}</td>
+          <td>{{vehicle.model}}</td>
+        </tr>
+        {%endfor%}
+      </table>
+    </div>
+    <div class="col-4"></div>
+  </div>
+
+{%endblock%}
